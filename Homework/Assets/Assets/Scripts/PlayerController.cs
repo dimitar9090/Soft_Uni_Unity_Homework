@@ -7,17 +7,17 @@ public class PlayerController : MonoBehaviour
     public float verticalInput;
     public float horizontalInput;
 
-    // Update is called once per frame
+    
     public void Update()
     {
-        // get the user's vertical input
-        verticalInput = Input.GetAxis("Vertical");     //forwardInput
-        horizontalInput = Input.GetAxis("Horizontal"); //sideInput
+        
+        verticalInput = Input.GetAxis("Vertical");     
+        horizontalInput = Input.GetAxis("Horizontal"); 
 
-        // move the plane forward at a constant rate
+        
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
 
-        // tilt the plane up/down based on up/down arrow keys
+        
         var up = Input.GetKey(KeyCode.UpArrow);
         var down = Input.GetKey(KeyCode.DownArrow);
 
